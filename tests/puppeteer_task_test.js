@@ -16,14 +16,12 @@ After(async function () { // or Background
     await browser.close();
 });
 
-/*
 Scenario('add task', async function () {
     await page.waitForSelector('#new-todo');
     await page.type('#new-todo', 'test task');
     await page.keyboard.press('Enter');
     await page.waitForXPath('//label[contains(text(), "test task")]');
 });
-*/
 
 Scenario('add second task', async function () {
     await page.waitForSelector('#new-todo');
@@ -41,7 +39,6 @@ Scenario('add second task', async function () {
     assert.equal(text, 2);
 });
 
-/*
 Scenario('remove task', async function () {
     await page.waitForSelector('#new-todo');
     await page.type('#new-todo', 'task for remove');
@@ -71,4 +68,3 @@ Scenario('edit task', async function () {
     await page.keyboard.press('Enter');
     await page.waitForXPath('//label[contains(text(), "task for edit + new text")]');
 });
-*/
